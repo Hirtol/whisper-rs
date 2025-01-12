@@ -305,7 +305,7 @@ impl<'a, 'b> FullParams<'a, 'b> {
     ///
     /// Defaults to false.
     pub fn set_suppress_non_speech_tokens(&mut self, suppress_non_speech_tokens: bool) {
-        self.fp.suppress_non_speech_tokens = suppress_non_speech_tokens;
+        self.fp.suppress_nst = suppress_non_speech_tokens;
     }
 
     /// Set initial decoding temperature.
