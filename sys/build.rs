@@ -252,7 +252,7 @@ fn main() {
 
     println!("cargo:rustc-link-search=native={}", destination.display());
     println!("cargo:rustc-link-lib=static=whisper");
-    println!("cargo:rustc-link-lib=static=ggml");
+    //println!("cargo:rustc-link-lib=static=ggml");
 
     println!(
         "cargo:WHISPER_CPP_VERSION={}",
