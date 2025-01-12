@@ -36,4 +36,6 @@ _gpu = []
 test-with-tiny-model = []
 whisper-cpp-log = ["dep:log"]
 whisper-cpp-tracing = ["dep:tracing"]
+# Whether to link GGML statically in our build-scripts, or to elide it in case we're compiling with a different GGML based crate.
+link-ggml = []
 openmp = ["whisper-rs-sys/openmp"]

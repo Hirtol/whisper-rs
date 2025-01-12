@@ -252,9 +252,12 @@ fn main() {
 
     println!("cargo:rustc-link-search=native={}", destination.display());
     println!("cargo:rustc-link-lib=static=whisper");
-    // println!("cargo:rustc-link-lib=static=ggml");
-    // println!("cargo:rustc-link-lib=static=ggml-base");
-    // println!("cargo:rustc-link-lib=static=ggml-cpu");
+    if cfg!(feature = "link-ggml") {
+        println!("cargo:rustc-link-lib=static=ggml");
+        println!("cargo:rustc-link-lib=static=ggml-base");
+        println!("cargo:rustc-link-lib=static=ggml-cpu");
+    }
+    
 
     println!(
         "cargo:WHISPER_CPP_VERSION={}",
